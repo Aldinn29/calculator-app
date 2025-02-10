@@ -1,0 +1,191 @@
+body{
+    background-color: hsl(0, 0%, 90%);
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.calculator{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    height: 45px;
+    width: 100%;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    gap: 10px;
+}
+
+.text{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    height: 50%;
+    width: 100%;
+    margin-top: auto;
+    padding: 0 5px;
+}
+
+.text h1{
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    margin: 0;
+}
+
+.text P{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 11px;
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.labels{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 7px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.labels span{
+    color: white;
+    font-size: 11px;
+}
+
+.toggle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 52px;
+    height: 18px;
+    background-color: hsl(0, 5%, 81%);
+    border-radius: 11px;
+    padding: 3px;
+}
+
+input[type="radio"] {
+    opacity: 0;
+}
+
+.circle {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: hsl(25, 98%, 40%);
+    transition: transform 0.3s ease;
+    position: absolute;
+    left: 0;
+}
+
+#option1:checked ~ .circle {
+    transform: translateX(4px);
+}
+
+#option2:checked ~ .circle {
+    transform: translateX(22px);
+}
+
+#option3:checked ~ .circle {
+    transform: translateX(41px);
+}  
+
+.display{
+    width: 100%;
+    align-items: center;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#display {
+    width: 100%;
+    padding: 20px;
+    font-size: 4.2rem;
+    color: white;
+    background-color: hsl(0, 0%, 93%);
+    border-radius: 10px;
+    border: none;
+    text-align: right;
+    box-sizing: border-box;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
+    background-color: hsl(0, 5%, 81%);
+    border-radius: 10px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.btn{
+    padding: 7px 20px;
+    font-size: 32px;
+    font-weight: bold;
+    background-color: hsl(185, 42%, 37%);
+    color: hsl(60, 10%, 19%);
+    box-shadow: 0 4px hsl(185, 58%, 25%);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+    background-color: hsl(185, 42%, 45%);
+    box-shadow: 0 6px hsl(185, 58%, 25%);
+}
+
+#delete, #reset, #equal{
+    font-size: 1.6rem;
+}
+
+#delete, #reset{
+    background-color: hsl(45, 7%, 89%);
+    color: hsl(60, 10%, 19%);
+    box-shadow: 0 4px hsl(35, 11%, 61%);
+}
+
+#delete:hover, #reset:hover{
+    background-color: hsl(45, 7%, 80%);
+    box-shadow: 0 6px hsl(35, 11%, 61%);
+}
+
+#equal{
+    background-color: hsl(25, 98%, 40%);
+    color: white;
+    box-shadow: 0 4px hsl(25, 99%, 27%);
+}
+
+#equal:hover{
+    background-color: hsl(25, 98%, 50%);
+    box-shadow: 0 6px hsl(25, 99%, 27%);
+}
+
+#reset, #equal{
+    grid-column: span 2;
+}
